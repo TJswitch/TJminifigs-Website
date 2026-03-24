@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+:root {
+    --base-color: #ff0000;
+    --text-color: #000000;
+    --primary-color: #00ff48;
+    --secondary-color: #8D8DFF;
+    --color-1: #d4ff00;
+    --color-2: #F3F7F9;
+    --color-3: #F6F3F9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Merriweather, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+}
+
+
+body {
+    padding: 1em;
+    background-color: var(--base-color);
+}
+
+h1, h2, h3 {
+    font-family: Lexend, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    margin: 1em auto 3em auto; /* top right bottom left */
+    width: min(1000px, 100%);
+}
+
+nav ul {
+    display: flex; /* makes nav bar into a horizontal row */
+    align-items: center; /* centers it vertically */
+    list-style-type: none; /* removes bullet points from each entry */
+    gap: 2em; /* space between enteries */
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-family: Lexend, Merriweather;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header, section {
+    margin: 2em auto;
+    width: min(75em, 100%);
+    background-color: var(--color-1);
+    padding: min(2em, 15%);
+    border-radius: 1em;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* stacks stuff above each other when not enough width */
+    gap: 3em;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* stacks stuff above each other when not enough width */
+    gap: 3em;
+}
+
+.flex-container img {
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+
+.flex-container img:hover {
+    scale: 1.05;
+}
+
+header img {
+    max-width: 100%;
+    border-radius: 9em;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.text-container {
+    flex: 0 1 34em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.text-container p {
+    margin: .75em 0 1em 0;
+    font-size: 1.25rem;
+}
+
+.cta-button {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: var(--primary-color);
+    padding: .75em 1.25em;
+    border-radius: .5em;
+    font-weight: 600;
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+section {
+    padding: 1em min(1em, 15%);
+    background-color: var(--color-1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+section p {
+    margin-top: 1em;
+    font-size: 1.25em;
+}
+
+section#Thunderbolts {
+    background-color: var(--color-3);
+}
+
+.grid-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img-1 img-1 img-2 img-3"
+    "img-1 img-1 img-4 img-5";
+    gap: 1em;
+}
+
+
+.grid-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+
+.grid-container img:hover {
+    scale: 1.05;
+}
+
+.grid-container-eggman {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img-1 img-4"
+    "img-2 img-3";
+    gap: 1em;
+}
+
+
+.grid-container-eggman img {
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+
+.grid-container-eggman img:hover {
+    scale: 1.05;
+}
+
+.grid-container-preacher {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img-1 img-4"
+    "img-2 img-3";
+    gap: 1em;
+}
+
+
+.grid-container-preacher img {
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+
+.grid-container-preacher img:hover {
+    scale: 1.05;
+}
+
+.grid-container-b99 {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img-1 img-2 img-3 img-4"
+    "img-5 img-6 img-7 img-8";
+    gap: 1em;
+}
+
+
+.grid-container-b99 img {
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+
+.grid-container-b99 img:hover {
+    scale: 2;
+}
+
+.grid-container-dw {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img-1";
+    gap: 1em;
+}
+
+
+.grid-container-dw img {
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+
+.grid-container-dw img:hover {
+    scale: 1.05;
+}
+
+.grid-container-sunny {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img-1 img-2 img-3";
+    gap: 1em;
+}
+
+
+.grid-container-sunny img {
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;
+    transition: 100ms ease;
+}
+
+.grid-container-sunny img:hover {
+    scale: 1.5;
+}
+
+@media(max-width: 988px) {
+    header {
+        text-align: center;
+    }
+
+    header .text-container {
+        padding-top: 0;
+    }
+}
+
+@media(max-width: 640px) {
+    nav li {
+        display: none;
+    }
+
+    nav li:first-child {
+        display: block;
+    }
+
+    header {
+        margin-top: 0;
+    }
+
+    .cta-button {
+        margin-top: .5em;
+        width: 100%;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-container p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
